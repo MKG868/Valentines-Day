@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff6b9d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Will You Be My Valentine? 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Music -->
+    <!-- IMPORTANT: Add your own music file to the repository -->
+    <!-- Download a royalty-free love song and name it "background-music.mp3" -->
+    <!-- Or update the src below to point to your music file -->
+    <audio id="bgMusic" loop>
+        <source src="background-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Setup Page -->
+    <div id="setupPage" class="page active">
+        <div class="hearts-background"></div>
+        <div class="container">
+            <h1 class="main-title">💕 Create Your Valentine Message 💕</h1>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="fromName">Your Name:</label>
+                    <input type="text" id="fromName" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="toName">Their Name:</label>
+                    <input type="text" id="toName" placeholder="Enter their name">
+                </div>
+                <button id="createBtn" class="create-btn">Create Valentine Link 💌</button>
+                <div id="linkContainer" class="link-container hidden">
+                    <p>Share this link:</p>
+                    <div class="link-box">
+                        <input type="text" id="generatedLink" placeholder="Your Valentine link will appear here" readonly>
+                        <button id="copyBtn" class="copy-btn">Copy</button>
+                    </div>
+                    <p class="success-message">Link copied! Send it to your special someone! 💝</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Page -->
+    <div id="questionPage" class="page">
+        <div class="hearts-background"></div>
+        <div class="container">
+            <h1 class="question-title">Will you be my Valentine?</h1>
+            <h2 id="crushName" class="crush-name"></h2>
+            <div class="button-container">
+                <button id="yesBtn" class="yes-btn">Yes! 💖</button>
+                <button id="noBtn" class="no-btn">No</button>
+            </div>
+            <p id="fromPerson" class="from-text"></p>
+        </div>
+    </div>
+
+    <!-- Love Letter Page -->
+    <div id="letterPage" class="page">
+        <div class="hearts-background"></div>
+        <div class="letter-container">
+            <div class="letter">
+                <div class="letter-header">
+                    <h1>💕 To My Valentine 💕</h1>
+                </div>
+                <div class="letter-body">
+                    <p class="dear">Dear <span id="letterName" class="highlight"></span>,</p>
+                    
+                    <p class="letter-text">
+                        From the moment I met you, my world became brighter. Your smile lights up my darkest days, 
+                        and your laughter is my favorite melody.
+                    </p>
+                    
+                    <p class="letter-text">
+                        Every moment spent with you is a treasure I hold close to my heart. You make ordinary days 
+                        extraordinary, and I can't imagine my life without you in it.
+                    </p>
+                    
+                    <p class="letter-text">
+                        You are my sunshine, my inspiration, and my greatest adventure. Thank you for being you, 
+                        and for making me the happiest person alive.
+                    </p>
+                    
+                    <p class="letter-text special">
+                        I'm so grateful you said YES! ❤️
+                    </p>
+                    
+                    <p class="signature">
+                        Forever yours,<br>
+                        <span id="senderName" class="highlight"></span>
+                    </p>
+                </div>
+                <div class="floating-hearts">
+                    <span class="heart">💕</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💗</span>
+                    <span class="heart">💓</span>
+                    <span class="heart">💝</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
